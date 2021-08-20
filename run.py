@@ -13,7 +13,10 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("love_sandwiches")
 
 def get_sales_data():
-    """Get sales input figures from the user"""
+    """
+    Get sales figures input from the user.
+    Run a while loop to ensure correct string data is provided, and
+    the loop breaks when correct data type is provided and function returns sales data """
     while True:
         print("Please enter sales data from the last market.")
         print("Data should be six numbers, seperated by commas")
